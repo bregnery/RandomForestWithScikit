@@ -1,4 +1,4 @@
-# RandomForestScikit
+# RandomForestWithScikit
 
 This is one step in the process of ultimately creating a OpenCL Random Forest Implementation for the CMS experiment.
 In this step we are looking at the performance of the random forest in python's scikit-learn on data from the EMTF.
@@ -19,7 +19,7 @@ directory.
 
 Then, clone this repository in the source directory and compile the CMS software.
 
-    git clone https://github.com/bregnery/RandomForestScikit.git
+    git clone https://github.com/bregnery/RandomForestWithScikit.git
     scram b
     cmsenv
 
