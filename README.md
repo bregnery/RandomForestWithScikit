@@ -36,10 +36,15 @@ The necessary machine learning environment can be set up with the following (fro
     pip install Keras
     source /cvmfs/sft.cern.ch/lcg/views/LCG_85swan3/x86_64-slc6-gcc49-opt/setup.sh
 
-Running an Example
-------------------
+Running the Flower Example
+--------------------------
 
-Once an example is created, directions for running it will be included here.
+The flower example is explained here: http://www.agcross.com/2015/02/random-forests-in-python-with-scikit-learn/
+
+To run the flower example, simply do:
+
+    cd examples/
+    python FlowerRF.py
 
 Background
 ==========

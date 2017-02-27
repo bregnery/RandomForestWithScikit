@@ -9,6 +9,10 @@ from sklearn.datasets import load_iris
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import timeit
+
+# Start program timer
+start = timeit.default_timer()
 
 #============================================
 #///////// Load Dataset /////////////////////
@@ -47,6 +51,12 @@ forest.fit(train[features], y)
 preds = iris.target_names[forest.predict(test[features])]
 print pd.crosstab(index=test['species'], columns=preds, rownames=['actual'], colnames=['preds'])
 
+# Stop the timer and get the run time of creating the 
+# Random Forest
+stop = timeit.default_timer()
+print "The runtime of training and testing the random forest is: "  
+print stop - start
+
 #============================================
 #////// Plots ///////////////////////////////
 #============================================
@@ -62,3 +72,4 @@ plt.barh(range(len(indicies)), importances[indicies], color='b', align='center')
 plt.yticks(range(len(indicies)), features[indicies])
 plt.xlabel('Relative Importance')
 plt.savefig('FeatureImportance.png')
+

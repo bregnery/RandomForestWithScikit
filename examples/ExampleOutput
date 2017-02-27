@@ -1,0 +1,7 @@
+preds       setosa  versicolor  virginica
+actual                                   
+setosa           9           0          0
+versicolor       0          14          2
+virginica        0           2          7
+The runtime of training and testing the random forest is: 
+0.172070026398
