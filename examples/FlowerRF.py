@@ -2,7 +2,7 @@
 # From http://www.agcross.com/2015/02/random-forests-in-python-with-scikit-learn/
 
 # Import Random Forest and Scikit's example dataset
-from sklearn.ensemble import RandomForestClassifer as RFC
+from sklearn.ensemble import RandomForestClassifier as RFC
 from sklearn.datasets import load_iris
 
 # Import necessary packages
@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 
 # Create dataframe from iris dataset
 iris = load_iris()
-df = pd.DataFrame(iris.data, columns=iris.freature_names)
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
 
 #============================================
 #////// Train and Test Random Forest ////////
@@ -58,6 +58,7 @@ indicies = np.argsort(importances)
 # Plot the most important features
 plt.figure(1)
 plt.title('Feature Importances')
-plt.barh(range(len(indices)), importances[indicies], color='b', align='center')
-plt.yticks(range(len(indicies)), features[indices])
+plt.barh(range(len(indicies)), importances[indicies], color='b', align='center')
+plt.yticks(range(len(indicies)), features[indicies])
 plt.xlabel('Relative Importance')
+plt.savefig('FeatureImportance.png')
