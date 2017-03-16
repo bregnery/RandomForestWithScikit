@@ -7,10 +7,15 @@ This README is broken up into several sections: Instructions, Background, and Ob
 Instructions
 ============
 
-Installation
-------------
+This program has been developed with CMSSW_8_0_20 on CERN's lxplus and with the University of Florida's HiPerGator.
 
-This program has been developed with CMSSW_8_0_20 on CERN's lxplus. To obtain this software, obtain this CMSSW release and move into the source directory. 
+Instructions or lxplus
+----------------------
+
+### Installation on lxplus
+
+
+To obtain the dependency software, obtain a CMSSW release and move into the source directory. 
 
     cmsrel CMSSW_8_0_20
     cd CMSSW_8_0_20/src
@@ -22,8 +27,8 @@ Then, clone this repository in the source directory and compile the CMS software
     scram b
     cmsenv
 
-Creating the Machine Learning Environment on lxplus
----------------------------------------------------
+### Creating the Machine Learning Environment on lxplus
+
 
 The necessary machine learning environment can be set up with the following (from https://indico.cern.ch/event/565647/contributions/2308670/attachments/1345360/2028920/MLSoftwareStandAloneSetup__AtlasComputing__TWiki.pdf)
 
@@ -36,20 +41,31 @@ The necessary machine learning environment can be set up with the following (fro
     pip install Keras
     source /cvmfs/sft.cern.ch/lcg/views/LCG_85swan3/x86_64-slc6-gcc49-opt/setup.sh
 
-Setting up the Machine Learning Environment on lxplus
------------------------------------------------------
+### Setting up the Machine Learning Environment on lxplus
+
 
 After creating the maching learning environment on lxplus, it can be accessed during future logins with the following:
 
     source activate testenv
     source /cvmfs/sft.cern.ch/lcg/views/LCG_85swan3/x86_64-slc6-gcc49-opt/setup.sh
 
-Setting up the Machine Learning Environment on HiPerGator
----------------------------------------------------------
+Instructions for HiPerGator
+---------------------------
+
+### Installation on the HiPerGator
+
+To use this program on the HiPerGator, load the necessary modules and clone the repository from git.
+
+    module load ufrc
+    srundev --time=04:00:00
+    git clone https://github.com/bregnery/RandomForestWithScikit.git
+
+### Setting up the Machine Learning Environment on HiPerGator
 
 To set up the maching learning environment on the HiPerGator, load the necessary modules and enter development mode with the following commands:
 
     module load ufrc
+    module load root
     module load python
     srundev --time=04:00:00
 

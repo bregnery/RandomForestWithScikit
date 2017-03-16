@@ -10,6 +10,8 @@ from sklearn.datasets import load_iris
 # Import necessary packages
 import numpy as np
 import pandas as pd
+import matplotlib
+matplotlib.use("pdf") # So an x server connection is not required
 import matplotlib.pyplot as plt
 import timeit
 
@@ -56,8 +58,7 @@ print pd.crosstab(index=test['species'], columns=preds, rownames=['actual'], col
 # Stop the timer and get the run time of creating the 
 # Random Forest
 stop = timeit.default_timer()
-print "The runtime of training and testing the random forest is: "  
-print stop - start
+print "The runtime of training and testing the random forest is: ", stop - start
 
 #===================================================================================
 #////// Plots //////////////////////////////////////////////////////////////////////
