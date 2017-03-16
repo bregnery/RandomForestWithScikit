@@ -22,8 +22,8 @@ Then, clone this repository in the source directory and compile the CMS software
     scram b
     cmsenv
 
-Setting up the Machine Learning Environment on lxplus
------------------------------------------------------
+Creating the Machine Learning Environment on lxplus
+---------------------------------------------------
 
 The necessary machine learning environment can be set up with the following (from https://indico.cern.ch/event/565647/contributions/2308670/attachments/1345360/2028920/MLSoftwareStandAloneSetup__AtlasComputing__TWiki.pdf)
 
@@ -35,6 +35,23 @@ The necessary machine learning environment can be set up with the following (fro
     pip install Theano
     pip install Keras
     source /cvmfs/sft.cern.ch/lcg/views/LCG_85swan3/x86_64-slc6-gcc49-opt/setup.sh
+
+Setting up the Machine Learning Environment on lxplus
+-----------------------------------------------------
+
+After creating the maching learning environment on lxplus, it can be accessed during future logins with the following:
+
+    source activate testenv
+    source /cvmfs/sft.cern.ch/lcg/views/LCG_85swan3/x86_64-slc6-gcc49-opt/setup.sh
+
+Setting up the Machine Learning Environment on HiPerGator
+---------------------------------------------------------
+
+To set up the maching learning environment on the HiPerGator, load the necessary modules and enter development mode with the following commands:
+
+    module load ufrc
+    module load python
+    srundev --time=04:00:00
 
 Running the Flower Example
 --------------------------
